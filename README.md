@@ -1,4 +1,5 @@
 # 0x02. Unity - Scripting
+
 Repo for my 0x02 - unity - scripting pnroject.
 
 heres theh build notes / instructions as i did them:
@@ -29,10 +30,9 @@ The camera should follow the Player as it moves. In other words, when the player
 The camera’s position should remain at a constant offset from the Player‘s position.
 The camera does not need to rotate.
 
-
 3. Insert coin
-mandatory
-Create a new Cylinder GameObject named Coin.
+   mandatory
+   Create a new Cylinder GameObject named Coin.
 
 Position: (27, 1.7, 24)
 Rotation: (0, 0, 90)
@@ -44,8 +44,8 @@ The Coin‘s Collider component should have Is Trigger checked (Why?)
 Turn Coin into a prefab inside a directory called Prefabs
 
 4. Coin collecting
-mandatory
-Create a new C# script called Rotator.cs and attach it to Coin.
+   mandatory
+   Create a new C# script called Rotator.cs and attach it to Coin.
 
 Within the Update() function, change the x value of the Coin‘s rotation to 45 over time.
 Hint: Time.deltaTime
@@ -62,9 +62,9 @@ Place at least 20 total Coins within the maze in any X / Z position you like, as
 Create an empty GameObject named Coins to contain all the Coin objects in the Hierarchy window. Make sure the new empty GameObject’s Scale values are all set to 1 before dragging the Coin objects into the Coins object to avoid issues with the coins’ scaling and rotation.
 
 5. Danger zone
-mandatory
-Score: 0.00% (Checks completed: 0.00%)
-Create a new Plane GameObject named Trap.
+   mandatory
+   Score: 0.00% (Checks completed: 0.00%)
+   Create a new Plane GameObject named Trap.
 
 Position: (9.5, 0.26, 27)
 Scale: (0.5, 1, 0.5)
@@ -75,8 +75,8 @@ The Trap‘s Collider component should have Convex and Is Trigger checked (Why?)
 Turn Trap into a prefab inside the Prefabs directory
 
 6. You've activated my trap card
-mandatory
-Add a new public int health variable to your PlayerController.cs script. Set the initial value of health to 5.
+   mandatory
+   Add a new public int health variable to your PlayerController.cs script. Set the initial value of health to 5.
 
 Add to the existing void OnTriggerEnter(Collider other) function:
 
@@ -87,9 +87,9 @@ Place at least 8 total Traps within the maze in any X / Z position you like, as 
 Create an empty GameObject named Traps to contain all the Trap objects in the Hierarchy window.
 
 7. The finish line
-mandatory
-Score: 0.00% (Checks completed: 0.00%)
-Create a new Plane GameObject named Goal.
+   mandatory
+   Score: 0.00% (Checks completed: 0.00%)
+   Create a new Plane GameObject named Goal.
 
 Position: (-27, 0.26, 1.8)
 Scale: (0.5, 1, 0.5)
@@ -99,26 +99,23 @@ Tag: Goal
 The Goal‘s Collider component should have Convex and Is Trigger checked
 
 8. Goaaaaaaaaaaal
-mandatory
-In PlayerController.cs, add to the existing void OnTriggerEnter(Collider other) function:
+   mandatory
+   In PlayerController.cs, add to the existing void OnTriggerEnter(Collider other) function:
 
 When the Player touches an object tagged Goal, write You win! to the console using Debug.Log()
-
 
 GitHub repository: 0x02-unity-scripting
 File: Assets/maze.unity, Assets/Scripts/PlayerController.cs
 
 9. Game over
-mandatory
-Create an Update() function within PlayerController.cs.
+   mandatory
+   Create an Update() function within PlayerController.cs.
 
 This function should check if health equals 0. If it does, write Game Over! to the console using Debug.Log()
 If health equals 0, reload the scene so that the Player starts again from the beginning
 The Player‘s health and score should reset to their original values
 You may have issues with the lighting preview in Unity when testing and reloading your scene. For more information, watch Fix Lighting Going Dark in the Unity Editor When Resetting a Scene
 
-
 Repo:
 
 GitHub repository: 0x02-unity-scripting
-File: Assets/maze.unity, Assets/Scripts/PlayerController.cs
